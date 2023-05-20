@@ -1,0 +1,13 @@
+# Executables
+*.exe
+*.out
+*.app
+*.bat
+
+#Files made from this project
+*.pbm
+*.ppm
+*.pgm
+
+#vscode
+.vscode/*
