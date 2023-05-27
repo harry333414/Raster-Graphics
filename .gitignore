@@ -8,6 +8,21 @@
 *.pbm
 *.ppm
 *.pgm
+*.txt
 
 #vscode
 .vscode/*
+.vscode
+
+#tests
+main.cpp
+
+#unfinished business
+.PBM/*
+.PBM
+.PBM_multiple/*
+.PBM_multiple
+.PGM/*
+.PGM
+
+ImageType_converter

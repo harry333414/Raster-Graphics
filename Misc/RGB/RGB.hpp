@@ -14,7 +14,7 @@ class RGB {
         size_t green;
         size_t blue;
 
-        void checkInput(size_t color, size_t input);
+        // void checkInput(size_t color, size_t input);
 
     public:
 
@@ -24,6 +24,12 @@ class RGB {
         size_t getRed() const;
         size_t getGreen() const;
         size_t getBlue() const;
+        
+        void setRed(size_t color);
+        void setGreen(size_t color);
+        void setBlue(size_t color);
+
+        bool operator != (const RGB& other);
 
         ~RGB() = default;
 

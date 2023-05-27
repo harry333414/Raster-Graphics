@@ -16,6 +16,28 @@ Description::Description(string line)
 Description::Description(vector<string> lines)
     : lines(lines) {}
 
+Description::Description(const Description& other) {
+
+    this->lines.resize(other.getDescription().size());
+
+    for(size_t i = 0; i < this->lines.size(); i++) lines[i] = other.getDescription()[i];
+
+}
+
+Description& Description::operator = (const Description& other) {
+
+    if(this != &other) {
+
+        this->lines.resize(other.getDescription().size());
+
+        for(size_t i = 0; i < this->lines.size(); i++) lines[i] = other.getDescription()[i];
+
+    }
+
+    return *this;
+
+}
+
 bool Description::operator == (const Description& other) {
 
     if(this->lines.size() != other.lines.size()) return false;
@@ -33,6 +55,8 @@ bool Description::operator == (const Description& other) {
 vector<string> Description::getDescription() const { return this->lines; }
 
 void Description::setDescription(const vector<string> description) { this->lines = description; }
+
+void Description::addToDescription(const string& line) { this->lines.push_back(line); }
 
 bool Description::with_description() const {
 

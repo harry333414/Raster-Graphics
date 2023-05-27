@@ -19,9 +19,13 @@ class Point : public IPrintable {
         Point(size_t width, size_t height);
 
         bool operator == (const Point& other);
+        bool operator != (const Point& other);
 
         size_t getWidth() const;
         size_t getHeight() const;
+        
+        void setWidth(size_t width);
+        void setHeight(size_t height);
 
         const string toString() const override final;
 

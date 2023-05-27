@@ -15,9 +15,20 @@ bool Point::operator == (const Point& other) {
 
 }
 
+bool Point::operator != (const Point& other) {
+
+    if(this->width != other.width || this->height != other.height) return true;
+    else return false;
+
+}
+
 size_t Point::getWidth() const { return this->width; }
 
 size_t Point::getHeight() const { return this->height; }
+
+void Point::setWidth(size_t width) { this->width = width; }
+
+void Point::setHeight(size_t height) { this->height = height; }
 
 const string Point::toString() const {
 
